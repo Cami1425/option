@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        Web Design II
+        Author: Camila Lopez
+        Date: October 19 2024
+
+        Filename: option.html
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Option</title>
+        <link rel="stylesheet" href="./css/option.css">
+    </head>
+    <body>
+        <header id="option-header">
+            <div class="icon">
+                <img src="./images/favicon-192x192.png" alt="Logo with letter C" width="50" height="50">
+            </div>
+    
+            <!-- Nav bar -->
+            <nav class="nav">
+                <a href="./home.html" class="active home-link">Home</a>
+            </nav>
+    
+        </header>
+
+        <main>
+            <section class="container layout-row">
+                <div class="option-content-split">
+                    <div>
+                        <h1>Camila J. Lopez Gutierrez</h1><br>
+                        <p>Site Topic: Holistic Self-Care</p>
+                        <p>Option: CSS Option</p>
+                        <p>Categories:</p> 
+                            <ol>
+                                <li>Linear gradients</li>
+                                <li>@font-face rule</li>
+                                <li>Horizontal scrolling</li>
+                                <li>Box shadows</li>
+                                <li>Text shadow</li>
+                                <li>Alpha transparency (requires using HSL or RGB rather than HEX for color values)</li>
+                                <li>CSS structural pseudo-classes (such as last-child, nth-child, negation, etc)</li>
+                                <li>CSS attribute and/or substring matching attribute selectors</li>
+                            </ol>
+                    </div>
+                </div>
+        
+                <!-- Iframe -->
+                <div class="option-content-split">
+                    <div class="iframe-crop">
+                        <iframe src="home.html" width="400" height="600"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container layout-column">
+                <div class="option-content">
+                    <h2>Explanation of use for CSS categories</h2>
+                    <ol class="column-split">
+                        <li><strong>Linear Gradient:</strong> I applied a linear gradient background to the header using the <code>linear-gradient</code> function. Creating a smooth transition between colors in the background of the header.</li>
+                        
+                        <li><strong>@font-face Rule:</strong> I used two fonts: "Dancing Script" and "Amatic SC", embedded from Google Fonts. Giving the header a custom design. I added the links to Google Fonts in the head section of the home.html page.</li>
+                    
+                        <li><strong>Horizontal Scrolling:</strong> I implemented horizontal scrolling in the navigation menu that points to specific parts of the site, using flexbox and overflow-x. With <code>flex-wrap: nowrap</code> and <code>overflow-x: auto</code> to allow users to scroll horizontally when necessary.</li>
+                    
+                        <li><strong>Box Shadow:</strong>  I applied a <code>box-shadow</code> to the scroll menu, images, and iframe to create a 3D effect. The subtle shadow enhances visibility, making these elements stand out.</li>
+                    
+                        <li><strong>Text Shadow:</strong> I applied <code>text-shadow</code> when hovering over the menu items, creating a glowing effect that adds emphasis to the pointed text.</li>
+                    
+                        <li><strong>Use of Alpha Transparency:</strong> I applied alpha transparency in both the box shadows and text shadows to enhance the visual effects. Additionally, I used alpha with RGBA in the overlay on the main image for copyright attribution, ensuring legibility without completely covering the image.</li>
+
+                        <li><strong>CSS Structural Pseudo-Classes:</strong> I used the <code>:last-child</code> pseudo-class to bold the last paragraph of each article. Additionally, I applied the <code>:nth-child()</code> pseudo-class with a numeric expression (n+3) and (n+2) to make the image layout responsive. Using @media queries, two images are displayed when the viewport is less than 768px wide, and only one image when the viewport is less than 480px wide.</li>
+                    
+                        <li><strong>Substring Matching Attribute Selectors:</strong> In the footer, I used a substring matching attribute selector <code>[href^="mailto:"]</code> to style the email link. Applying a unique color and font weight to email addresses, making it stand out in the footer.</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Camila Lopez Gutierrez &bull; Web Design II</h3>
+            <h3>2024</h3>
+            <p><a href="mailto:cjl2737@email.vccs.edu">cjl2737@email.vccs.edu</a></p>
+        </footer>
+    </body>
+</html>

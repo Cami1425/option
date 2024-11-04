@@ -1,0 +1,413 @@
+/*  
+    Web Design II
+    Author: Camila Lopez
+    Date: October 18 2024
+    Filename: option.css 
+*/
+        
+/* Use of Linear-gradient and alpha transparency with rgba*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #d7e8f7, #cfe3e3);
+    color: #333;
+}
+
+.home-header {
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to right, #e0f7e9, #b3e5c8, #aed9e0, #d0f4f7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ 
+/* Use of @font-face Rule */
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    font-style: normal;
+    line-height: 3.5rem;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+    .amatic-sc-regular {
+        font-size: 5rem;
+        line-height: 3rem;
+    }
+    .dancing-script {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .amatic-sc-regular {
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+    .dancing-script {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Use horizontal scroll in menu */
+/* Use of box shadows and alpha transparency with rgba*/
+.scroll-container {
+    display: flex;
+    box-shadow: 0 4px 6px rgba(58, 58, 58, 0.628);
+}
+
+.scroll-menu {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: rgb(220, 215, 215);
+    text-decoration: none;
+    width: 15vw;
+    padding: 1%;
+    background:#1e1f1fdb;
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 850px) {
+    .menu {
+        font-size: 1.1rem;
+        padding: 2%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        font-size: 1rem;
+        padding: 3% 4%; 
+    }
+}
+
+/* Responsive for iframe embedded */
+@media (max-width: 400px) {
+    .menu {
+        font-size: 0.8rem;
+        padding: 3% 9%; 
+    }
+}
+
+/* Use of text shadows */
+.menu:hover {
+    background-color: black;
+    color: white;
+    box-sizing:content-box;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+main {
+    max-width: 100%;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.copyright {
+    position: relative;
+    max-width: 425px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #ccc;
+}
+
+.copyright img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.copyright img:hover {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); 
+    width: 100%;
+    opacity:0;
+    padding: 10px;
+    text-align: left;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: black;
+}
+
+.copyright:hover .overlay {
+    opacity: 1;
+  }
+
+.copyright:focus .overlay {
+    text-decoration: none;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* CSS structural pseudo-classes (such as last-child, nth-child, negation, etc) */
+.text p:last-child {
+    font-weight: bold;
+}
+
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 200px;
+
+}
+
+.images img {
+    width: 100%;
+    margin: 10%;
+    border-radius: 20%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(58, 58, 58, 0.628);
+ }
+
+ /* CSS structural pseudo-classes (such as last-child, nth-child, negation, etc) */
+ /* Show only two images */
+ @media (max-width: 850px) {
+    .images img:nth-child(n+3) {
+        display: none;
+    }
+}
+
+
+/* Show only the first image */
+@media (max-width: 480px) {
+    .images img:nth-child(n+2) {
+        display: none;
+    }
+}
+
+
+
+footer {
+    margin: 7% 0 5% 0;
+}
+
+footer h3{
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: 900;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6em;
+}
+
+footer a {
+    color: rgb(64, 67, 76);
+    text-decoration: none;
+}
+
+ /* CSS attribute and/or substring matching attribute selectors */
+footer a[href^="mailto:"] {
+    color: rgb(79, 148, 114);
+    font-weight: bold;
+}
+
+
+/*
+  ========================================
+  option page
+  ========================================
+*/
+
+.icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#option-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.814);
+    top: 0;
+}
+
+.nav{
+    padding: 12px;
+    justify-content: end;
+    display: flex;
+}
+
+.nav .home-link {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 1.1em;
+    margin: 0 5px;
+}
+
+.nav .home-link:hover {
+    background-color: rgb(73, 72, 72);
+    border-radius: 5px;
+}
+
+.active {
+    border-bottom: 2px solid rgba(199, 200, 199, 0.736);  
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    height: auto;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.container:nth-child(even) {
+    background-color: white;
+}
+
+.layout-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-content-split {
+    width: 40%;
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.iframe-crop {
+    max-width: 350px;
+    max-height: 350px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30%;
+}
+
+.iframe-crop:hover {
+    max-width: 360px;
+    height: 360px;
+    box-shadow: 0px 0px 6px 6px rgba(186, 186, 186, 0.904);
+}
+
+.container ol li {
+    line-height: 2rem;
+}
+
+@media (max-width: 850px) {
+    .layout-row {
+        flex-direction: column;
+    }
+
+    .option-content-split {
+        display: flex;
+        width: 90%;
+        margin: 2%;
+    }
+
+    .iframe-crop {
+        max-width: 250px;
+        max-height: 250px;
+
+    }
+}
+
+.option-content {
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    width: 90%;
+}
+
+.layout-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-split {
+    column-count: 2;
+    column-gap: 40px;
+    width: 90%;
+    list-style-position: inside;
+    text-align: justify;
+    padding-top: 5%;
+}
+
+.column-split li {
+    break-inside: avoid;
+    line-height: 1rem;
+}
+
+@media (max-width: 850px) {
+    .column-split {
+        column-count: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .column-split {
+        column-count: 1;
+        width: 80%;
+    }
+}
+
+code {
+    text-decoration: underline;
+}
